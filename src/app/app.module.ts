@@ -7,14 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from '../app/modules/base/sidebar/sidebar.component';
 import { NavbarComponent } from '../app/modules/base/navbar/navbar.component';
 import { FooterComponent } from '../app/modules/base/footer/footer.component';
-
+import { GenerateComponent } from './generate/generate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    GenerateComponent
   ],
   imports: [
     BrowserModule,
