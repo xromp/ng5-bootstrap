@@ -19,9 +19,19 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css",
+        "../node_modules/adminbsb-materialdesign/plugins/node-waves/waves.css",        
+        "../node_modules/adminbsb-materialdesign/css/style.css",
+        "../node_modules/adminbsb-materialdesign/css/themes/all-themes.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/adminbsb-materialdesign/plugins/jquery/jquery.min.js",
+        "../node_modules/adminbsb-materialdesign/plugins/bootstrap/js/bootstrap.js",
+        "../node_modules/adminbsb-materialdesign/plugins/bootstrap-select/js/bootstrap-select.js",
+        "../node_modules/adminbsb-materialdesign/plugins/jquery-slimscroll/jquery.slimscroll.js",
+        "../node_modules/adminbsb-materialdesign/plugins/node-waves/waves.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
