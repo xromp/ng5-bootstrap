@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BaseRoutingModule } from './base-routing.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
