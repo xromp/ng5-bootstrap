@@ -10,6 +10,7 @@ export class ViewComponent implements OnInit {
 
   private people;
   private display= { loading:false};
+
   constructor(private _profileService:ProfileService) { }
   
   ngOnInit() {
