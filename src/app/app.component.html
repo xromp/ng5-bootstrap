@@ -1,5 +1,23 @@
 <app-navbar></app-navbar>
 <app-sidebar></app-sidebar>
 <section class="content">
-    <router-outlet></router-outlet>  
+    <div class="container-fluid">
+        <!-- Page Loader -->        
+        <div class="pages-loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+        <!-- #END# Page Loader -->
+        
+        <router-outlet></router-outlet>  
+    </div>
 </section>

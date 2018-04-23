@@ -21,6 +21,7 @@
       "styles": [
         "../node_modules/adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css",
         "../node_modules/adminbsb-materialdesign/plugins/node-waves/waves.css",
+        "../node_modules/adminbsb-materialdesign/plugins/waitme/waitMe.css",
         "../node_modules/adminbsb-materialdesign/plugins/animate-css/animate.css",
         "../node_modules/adminbsb-materialdesign/css/style.css",
         "../node_modules/adminbsb-materialdesign/css/themes/all-themes.css",
@@ -32,6 +33,7 @@
         "../node_modules/adminbsb-materialdesign/plugins/bootstrap-select/js/bootstrap-select.js",
         "../node_modules/adminbsb-materialdesign/plugins/jquery-slimscroll/jquery.slimscroll.js",
         "../node_modules/adminbsb-materialdesign/plugins/node-waves/waves.js",
+        "../node_modules/adminbsb-materialdesign/plugins/waitme/waitMe.js",
         "../node_modules/adminbsb-materialdesign/js/admin.js",
         "../node_modules/adminbsb-materialdesign/js/pages/index.js",
         "../node_modules/adminbsb-materialdesign/js/demo.js"
