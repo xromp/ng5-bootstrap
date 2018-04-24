@@ -47,8 +47,9 @@
                     </li>
                 </ul>
             </div>
+            
             <div class="body table-responsive">
-                <table class="table">
+                <table class="table table-people">
                     <thead>
                         <tr>
                             <th>#</th>
@@ -66,8 +67,12 @@
 					</tbody>
 					<tfoot>
 						<nav>
-							<pagination-controls class="pagination" (pageChange)="pageChanged($event)"></pagination-controls>
-						</nav>
+							<pagination-controls class="pagination" [attr.loadingState]="display.loading" (pageChange)="pageChanged($event)"></pagination-controls>
+                        </nav>
+                        
+                        <div *ngIf="display.loading"  id="cardloading">
+                            <i class="material-icons">loop</i>
+                        </div>
 					</tfoot>
                 </table>
             </div>
