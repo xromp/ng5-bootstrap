@@ -48,37 +48,44 @@
                 </ul>
             </div>
             
-            <div class="body table-responsive">
-                <table class="table table-people">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>FIRST NAME</th>
-                            <th>LAST NAME</th>
-                            <th>USERNAME</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let person of people | paginate: { itemsPerPage:page.size, currentPage:page.currentPage, totalItems:page.totalItems }">
-                            <td [innerText]="person.fname"></td>
-							<td [innerText]="person.lname"></td>
-							<td [innerText]="person.mname"></td>
-                        </tr>
-					</tbody>
-					<tfoot>
-						<nav>
-							<pagination-controls class="pagination" [attr.loadingState]="display.loading" (pageChange)="pageChanged($event)"></pagination-controls>
-                        </nav>
-                        
-                        <div *ngIf="display.loading"  id="cardloading">
-                            <i class="material-icons">loop</i>
-                        </div>
-					</tfoot>
-                </table>
+            <div class="body">
+                <div class="table-responsive">
+                    <table class="table table-people" id="hey">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>FIRST NAME</th>
+                                <th>LAST NAME</th>
+                                <th>USERNAME</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let person of people | paginate: { itemsPerPage:page.size, currentPage:page.currentPage, totalItems:page.totalItems }">
+                                <td [innerText]="person.fname"></td>
+                                <td [innerText]="person.lname"></td>
+                                <td [innerText]="person.mname"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <nav>
+                                <pagination-controls class="pagination" [attr.loadingState]="display.loading" (pageChange)="pageChanged($event)"></pagination-controls>
+                            </nav>
+                            
+                            <div *ngIf="display.loading"  id="cardloading">
+                                <i class="material-icons">loop</i>
+                            </div>
+                        </tfoot>
+                    </table>
+                </div>
+
             </div>
+
+            
         </div>
+        
     </div>
 </div>
+
 <!-- #END# Basic Table -->
 <p>
   view works!

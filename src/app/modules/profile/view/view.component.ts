@@ -13,59 +13,45 @@ declare var $:any;
 })
 export class ViewComponent implements OnInit {
 
-  private people;
+  people;
   page = {
     size:10,
     currentPage:1,
     totalItems:100
   };
   display:any = {};
-
-  constructor(private _profileService:ProfileService, private _loadingIndicator:LoadingIndicatorService) { 
+  element;
+  constructor(private _profileService:ProfileService, 
+    private _loadingIndicator:LoadingIndicatorService) { 
     _loadingIndicator
     .onLoadingChanged
     .subscribe(isLoading => this.display.loading = isLoading);
-
   }
   
 
   ngOnInit() {
     this.pageChanged(1);
   }
-
-  // getPeople() {
-    
-  // }
+  
   ngAfterViewInit(){
-    $('.pagination').on('click', function (e) {
-      var $loading = $(this).parents('.table-people').waitMe({
-          effect: 'timer',
-          text: 'Loading...',
-          bg: 'rgba(255,255,255,0.90)',
-          color: '#555'
-      });
-      // if($(".pagination").attr("loadingState") == false){
-      //   console.log("eye");
-      //   $loading.waitMe('hide');
-      // };
-    });
 
-    // var loader = function (){
+    // $('.pagination').on('click', function (e) {
     //   var $loading = $(this).parents('.table-people').waitMe({
-    //     effect: 'timer',
-    //     text: 'Loading...',
-    //     bg: 'rgba(255,255,255,0.90)',
-    //     color: '#555'
+    //       effect: 'timer',
+    //       text: 'Loading...',
+    //       bg: 'rgba(255,255,255,0.90)',
+    //       color: '#555'
     //   });
-    // }
-
-    // loader();
+    //   console.log("loading:",$loading);
+    //   if($(".pagination").attr("loadingState") == false){
+    //     console.log("eye");
+    //     $loading.waitMe('hide');
+    //   };
+    // });
   }
 
   pageChanged(e) {
-    // this.showLoader();
     this.page.currentPage=e;
-
     var data = {
       page : this.page
     };
@@ -84,6 +70,6 @@ export class ViewComponent implements OnInit {
     )
 
   }
-
+  
   
 }
